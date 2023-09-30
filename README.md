@@ -119,7 +119,24 @@ A Journey to Mastery Through Daily Coding Commitment
 6. [Perfect Binary Tree](https://practice.geeksforgeeks.org/problems/perfect-binary-tree/1)
 
 ## Day-02
-### Upcoming
+1. [Header file management in c++](https://youtu.be/qaGzc56Rekg?si=laBOmip9eeVTZso-)
+   - [fix of one likely error in vs code](https://stackoverflow.com/questions/51117196/undefined-reference-error-in-vscode)
+   - [solution video](https://youtu.be/0u9_u1d-y-4?si=rsQ5xOfUGnxTcvG1)
+2. different Traversal technique of Tree
+     - inorder
+     - preorder
+     - postorder 
+     - level Order Traversal 
+     - [All traversal Link](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
+      - [Reverse Level  order Traversal](https://youtu.be/D2bIbWGgvzI?si=UPIK7v_rA4tO4qJv)
+3. [Count Leaves in Binary Tree
+](https://practice.geeksforgeeks.org/problems/count-leaves-in-binary-tree/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)  
+
+4. [Tree Building](https://youtu.be/5NiXlPrLslg?si=fsRvOHbVJXQDWPvp) 
+
+5. Level Order Traversal without Recursion    
+   - [This video series from TUF is amazing](https://youtube.com/playlist?list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&si=wHGQCUoA_ya19rCs)
+  
 ## Day-03
 ### Upcoming
 ## Day-04

@@ -1,57 +1,10 @@
 #include <bits/stdc++.h>
+#include "headerFile/tree.h"
 
 #define IOS                \
   ios::sync_with_stdio(0); \
   cin.tie(0);              \
   cout.tie(0);
-
-#define PI 3.141592653589793
-#define MOD 1000000007
-#define MOD1 998244353
-#define inf 1e18;
-
-#define int long long
-#define ll long long
-#define vll vector<long long>
-#define F first
-#define S second
-#define lb lower_bound
-#define ub upper_bound
-#define setup(x) setprecision(x) << fixed
-#define in insert
-#define pb push_back
-#define ppb pop_back
-#define mp make_pair
-#define pr pair<int, int>
-#define pq priority_queue<ll>
-#define mpq priority_queue<ll, vector<ll>, greater<ll>>
-
-#define all(x) (x).begin(), (x).end()
-#define allr(x) (x).rbegin(), (x).rend()
-
-#define rep(x, y, z) for (int x = (y); x <= (z); ++x)
-#define per(x, y, z) for (int x = (y); x >= (z); --x)
-
-#define watch(x) cerr << #x << " = " << x << "\n"
-
-#define test \
-  int _T;    \
-  cin >> _T; \
-  while (_T--)
-#define inp(x) \
-  int x;       \
-  cin >> x;
-#define out(x) cout << x << '\n';
-#define all(x) (x).begin(), (x).end()
-#define Sort(x) sort(all(x))
-#define endl '\n'
-#define setup(x) setprecision(x) << fixed
-#define trav(i, v) for (auto &i : v)
-#define tr(it, a) for (auto it = a.begin(); it != a.end(); it++)
-#define take(v) trav(i, v) cin >> i;
-#define show(v)                \
-  trav(i, v) cout << i << " "; \
-  cout << "\n";
 
 #define Max(x, y, z) max(x, max(y, z))
 #define Min(x, y, z) min(x, min(y, z))
@@ -61,26 +14,13 @@
 
 using namespace std;
 // Definition for a binary tree node
-class TreeNode
-{
-public:
-  int data;
-  TreeNode *left;
-  TreeNode *right;
-  TreeNode(int data)
-  {
-    this->data = data;
-    this->left = nullptr;
-    this->right = nullptr;
-  }
-};
-int depth(TreeNode *root)
+int depth(const TreeNode *root)
 {
   if (root == nullptr)
     return -1;
   return 1 + depth(root->left);
 }
-int height(TreeNode *root)
+int height(const TreeNode *root)
 {
   if (!root)
     return 0;
@@ -89,7 +29,7 @@ int height(TreeNode *root)
   return max(lh, rh) + 1;
 }
 
-bool isBalanced(TreeNode *root)
+bool isBalanced(const TreeNode *root)
 {
   if (!root)
     return true;
@@ -102,7 +42,7 @@ bool isBalanced(TreeNode *root)
 
   return false;
 }
-bool isBstCheck(TreeNode *root, int minValue, int maxValue)
+bool isBstCheck(const TreeNode *root, int minValue, int maxValue)
 {
   if (!root)
   {
@@ -119,11 +59,11 @@ bool isBstCheck(TreeNode *root, int minValue, int maxValue)
          isBstCheck(root->right, root->data + 1, maxValue);
 }
 
-bool isBST(TreeNode *root)
+bool isBST(const TreeNode *root)
 {
   return isBstCheck(root, INT_MIN, INT_MAX);
 }
-bool isPerfectCheck(TreeNode *root, int depth, int level = 0)
+bool isPerfectCheck(const TreeNode *root, int depth, int level)
 {
 
   if (root == nullptr)
@@ -141,18 +81,18 @@ bool isPerfectCheck(TreeNode *root, int depth, int level = 0)
   return isPerfectCheck(root->left, depth, level + 1) && isPerfectCheck(root->right, depth, level + 1);
 }
 
-bool isPerfect(TreeNode *root)
+bool isPerfect(const TreeNode *root)
 {
   int d = depth(root);
   return isPerfectCheck(root, d);
 }
-int countNodes(TreeNode *root)
+int countNodes(const TreeNode *root)
 {
   if (root == nullptr)
     return 0;
   return countNodes(root->left) + countNodes(root->right) + 1;
 }
-bool isCompleteCheck(TreeNode *root, int numberOfNodes, int index = 0)
+bool isCompleteCheck(const TreeNode *root, int numberOfNodes, int index)
 {
   if (root == nullptr)
     return true;
@@ -166,7 +106,7 @@ bool isComplete(TreeNode *root)
   cout << "Number of nodes " << numberOfNodes << endl;
   return isCompleteCheck(root, numberOfNodes);
 }
-bool isFullBinaryTree(TreeNode *root)
+bool isFullBinaryTree(const TreeNode *root)
 {
   if (root == nullptr)
     return true;
@@ -177,12 +117,12 @@ bool isFullBinaryTree(TreeNode *root)
   return false;
 }
 
-bool isFull(TreeNode *root)
+bool isFull(const TreeNode *root)
 {
   if (!root)
     return true;
   queue<TreeNode *> q;
-  q.push(root);
+  q.push(const_cast<TreeNode*>(root));
   while (!q.empty())
   {
     auto node = q.front();
@@ -198,7 +138,7 @@ bool isFull(TreeNode *root)
   }
   return true;
 }
-bool symmetricHelp(TreeNode *left, TreeNode *right)
+bool symmetricHelp(const TreeNode *left, const TreeNode *right)
 {
   if (!left || !right)
     return left == right;
@@ -206,7 +146,7 @@ bool symmetricHelp(TreeNode *left, TreeNode *right)
     return false;
   return symmetricHelp(left->left, right->right) && symmetricHelp(left->right, right->left);
 }
-bool isSymmetric(TreeNode *root)
+bool isSymmetric(const TreeNode *root)
 {
   return symmetricHelp(root->left, root->right);
 }
@@ -246,16 +186,16 @@ void buildTreeFromLevelOrder(TreeNode *&root, ifstream &fin)
   }
 }
 
-int32_t main()
+/* int32_t main()
 {
   IOS;
   ifstream fin("input.txt");
 
   TreeNode *root = nullptr;
   buildTreeFromLevelOrder(root, fin);
-  bool ans = isFull(root);
+  bool ans = isPerfect(root);
   if (ans)
     cout << "Full Binary Tree" << endl;
   else
     cout << "Not Full Binary Tree" << endl;
-}
+} */
