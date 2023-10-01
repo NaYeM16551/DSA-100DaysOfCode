@@ -134,11 +134,18 @@ A Journey to Mastery Through Daily Coding Commitment
 
 4. [Tree Building](https://youtu.be/5NiXlPrLslg?si=fsRvOHbVJXQDWPvp) 
 
-5. Level Order Traversal without Recursion    
+5. Inorder,Preorder,postorder Traversal without Recursion    
    - [This video series from TUF is amazing](https://youtube.com/playlist?list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&si=wHGQCUoA_ya19rCs)
   
 ## Day-03
-### Upcoming
+1. [Three types of DFS traversal of tree using one function](https://youtu.be/ySp2epYvgTE?si=bhhvoiE_-OA4yvjl)
+
+2. [Diameter of a tree](https://practice.geeksforgeeks.org/problems/diameter-of-binary-tree/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
+3. [Varrifying Balanced Binary tree in optimized way(one using augmenting ,other without using augmenting)](https://practice.geeksforgeeks.org/problems/check-for-balanced-tree/1)
+
+4. [Determine if Two trees are identical](https://practice.geeksforgeeks.org/problems/determine-if-two-trees-are-identical/1)
+5. [Sum tree](https://practice.geeksforgeeks.org/problems/sum-tree/1)
+
 ## Day-04
 ### Upcoming
 ## Day-05

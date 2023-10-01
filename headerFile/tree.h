@@ -30,3 +30,4 @@ bool isFullBinaryTree(const TreeNode *root);
 bool symmetricHelp(const TreeNode *left, const TreeNode *right);
 bool isSymmetric(const TreeNode *root);
 void buildTreeFromLevelOrder(TreeNode *&root, ifstream &fin);
+void levelOrderTraversal(TreeNode* root);
