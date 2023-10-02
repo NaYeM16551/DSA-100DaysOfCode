@@ -111,7 +111,7 @@ pair<bool, int> isSumTreeFast(TreeNode *root, int rootData = 0)
     p.second = left_and_right_sum + root->data;
     return p;
 }
-int main()
+/* int main()
 {
     vector<int> pre, in, post;
     TreeNode *root = nullptr;
@@ -121,4 +121,4 @@ int main()
     cout << boolalpha << p.first << " " << p.second << endl;
 
     return 0;
-}
+} */

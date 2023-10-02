@@ -147,7 +147,10 @@ A Journey to Mastery Through Daily Coding Commitment
 5. [Sum tree](https://practice.geeksforgeeks.org/problems/sum-tree/1)
 
 ## Day-04
-### Upcoming
+1. [Zigzag tree Traversal](https://practice.geeksforgeeks.org/problems/zigzag-tree-traversal/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
+2. [Boundary Traversal of Binary Tree](https://practice.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/1)
+
+3. [Vertical Traversal of Binary Tree](https://practice.geeksforgeeks.org/problems/print-a-binary-tree-in-vertical-order/1)
 ## Day-05
 ### Upcoming
 ## Day-06
