@@ -152,7 +152,16 @@ A Journey to Mastery Through Daily Coding Commitment
 
 3. [Vertical Traversal of Binary Tree](https://practice.geeksforgeeks.org/problems/print-a-binary-tree-in-vertical-order/1)
 ## Day-05
-### Upcoming
+1. [Top view of a Tree](https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
+2. [Bottom View of a Tree](https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1)
+3. [Left View of a Binary tree](https://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1)
+4. [Right View](https://practice.geeksforgeeks.org/problems/right-view-of-binary-tree/1)
+
+5. [Diagonal View of a Binary tree](https://practice.geeksforgeeks.org/problems/diagonal-traversal-of-binary-tree/1)
+6. [Maximum  Path Sum](https://practice.geeksforgeeks.org/problems/maximum-path-sum-from-any-node/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
+7. [Sum of nodes on the longest path from root to leaf node](https://practice.geeksforgeeks.org/problems/sum-of-the-longest-bloodline-of-a-tree/1)
+8. [Lowest Common Ancestor Finding(LCA)](https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-binary-tree/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
+9. [K Sum Paths](https://practice.geeksforgeeks.org/problems/k-sum-paths/1)
 ## Day-06
 ### Upcoming
 ## Day-07
