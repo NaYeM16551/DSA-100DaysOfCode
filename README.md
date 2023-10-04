@@ -163,7 +163,12 @@ A Journey to Mastery Through Daily Coding Commitment
 8. [Lowest Common Ancestor Finding(LCA)](https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-binary-tree/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
 9. [K Sum Paths](https://practice.geeksforgeeks.org/problems/k-sum-paths/1)
 ## Day-06
-### Upcoming
+1. [Kth Ancestor](https://practice.geeksforgeeks.org/problems/kth-ancestor-in-a-tree/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
+
+2. [Maximum  Sum of Non-Adjacent Nodes](https://practice.geeksforgeeks.org/problems/maximum-sum-of-non-adjacent-nodes/1)
+3. [Construct tree from inorder and preorder](https://practice.geeksforgeeks.org/problems/construct-tree-1/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
+
+4.[Build Tree from postorder and inorder](https://practice.geeksforgeeks.org/problems/tree-from-postorder-and-inorder/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
 ## Day-07
 ### Upcoming
 ## Day-08
