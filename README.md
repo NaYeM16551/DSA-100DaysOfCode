@@ -168,7 +168,7 @@ A Journey to Mastery Through Daily Coding Commitment
 2. [Maximum  Sum of Non-Adjacent Nodes](https://practice.geeksforgeeks.org/problems/maximum-sum-of-non-adjacent-nodes/1)
 3. [Construct tree from inorder and preorder](https://practice.geeksforgeeks.org/problems/construct-tree-1/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
 
-4.[Build Tree from postorder and inorder](https://practice.geeksforgeeks.org/problems/tree-from-postorder-and-inorder/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
+4. [Build Tree from postorder and inorder](https://practice.geeksforgeeks.org/problems/tree-from-postorder-and-inorder/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
 ## Day-07
 ### Upcoming
 ## Day-08
