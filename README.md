@@ -170,7 +170,10 @@ A Journey to Mastery Through Daily Coding Commitment
 
 4. [Build Tree from postorder and inorder](https://practice.geeksforgeeks.org/problems/tree-from-postorder-and-inorder/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
 ## Day-07
-### Upcoming
+1. [Root to leaf Paths](https://practice.geeksforgeeks.org/problems/root-to-leaf-paths/1)
+2. [Root to any node](https://youtu.be/fmflMqVOC7k?si=L1gqhvWOQF8n319i)
+
+3. [Burning Tree](https://practice.geeksforgeeks.org/problems/burning-tree/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
 ## Day-08
 ### Upcoming
 ## Day-09
