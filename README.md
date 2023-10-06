@@ -175,7 +175,11 @@ A Journey to Mastery Through Daily Coding Commitment
 
 3. [Burning Tree](https://practice.geeksforgeeks.org/problems/burning-tree/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
 ## Day-08
-### Upcoming
+1. [Morris Traversal Postorder](https://www.geeksforgeeks.org/morris-traversal-for-postorder/)
+2. [Morris Traversal Inorder](https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion-and-without-stack/)
+3. [Morris traversal preorder](https://www.geeksforgeeks.org/morris-traversal-for-preorder/)
+4. [Video link from Tuf](https://youtu.be/80Zug6D1_r4?si=ACvlq0aDFYzl-Wm4)
+5. [Flatterning a Binary tree](https://practice.geeksforgeeks.org/problems/flatten-binary-tree-to-linked-list/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
 ## Day-09
 ### Upcoming
 ## Day-10
