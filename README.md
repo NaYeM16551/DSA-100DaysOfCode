@@ -175,13 +175,15 @@ A Journey to Mastery Through Daily Coding Commitment
 
 3. [Burning Tree](https://practice.geeksforgeeks.org/problems/burning-tree/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
 ## Day-08
-1. [Morris Traversal Postorder](https://www.geeksforgeeks.org/morris-traversal-for-postorder/)
-2. [Morris Traversal Inorder](https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion-and-without-stack/)
-3. [Morris traversal preorder](https://www.geeksforgeeks.org/morris-traversal-for-preorder/)
+1. [Morris Traversal Postorder](https://leetcode.com/problems/binary-tree-postorder-traversal/)
+2. [Morris Traversal Inorder](https://practice.geeksforgeeks.org/problems/inorder-traversal/1)
+3. [Morris traversal preorder](https://practice.geeksforgeeks.org/problems/preorder-traversal/1)
 4. [Video link from Tuf](https://youtu.be/80Zug6D1_r4?si=ACvlq0aDFYzl-Wm4)
 5. [Flatterning a Binary tree](https://practice.geeksforgeeks.org/problems/flatten-binary-tree-to-linked-list/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
 ## Day-09
-### Upcoming
+1. [Maximum Width of a Tree](https://practice.geeksforgeeks.org/problems/maximum-width-of-tree/1)
+2. [Children Sum Parent](https://practice.geeksforgeeks.org/problems/children-sum-parent/1)
+3. [Children Sum Property in linear Time](https://youtu.be/fnmisPM6cVo?si=r1ortc6EIZNAe4XM)
 ## Day-10
 ### Upcoming
 ## Day-11
