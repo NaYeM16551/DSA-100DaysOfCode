@@ -185,7 +185,12 @@ A Journey to Mastery Through Daily Coding Commitment
 2. [Children Sum Parent](https://practice.geeksforgeeks.org/problems/children-sum-parent/1)
 3. [Children Sum Property in linear Time](https://youtu.be/fnmisPM6cVo?si=r1ortc6EIZNAe4XM)
 ## Day-10
-### Upcoming
+1. [Nodes at given Distance in Binary tree](https://practice.geeksforgeeks.org/problems/nodes-at-given-distance-in-binary-tree/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
+2. [Count Node in a complete Binary Tree Optimized log^2 n approach](https://leetcode.com/problems/count-complete-tree-nodes/)
+   - [video solution](https://youtu.be/u-yWemKGWO0?si=0bakkN3hawxTf411)
+3. [Requirement to Construct a unique binary tree](https://youtu.be/9GMECGQgWrQ?si=VdeQX28M-C4J2l9o) 
+
+4. [Serialize and deserialize a Binary tree](https://practice.geeksforgeeks.org/problems/serialize-and-deserialize-a-binary-tree/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)  
 ## Day-11
 ### Upcoming
 ## Day-12
