@@ -192,7 +192,7 @@ A Journey to Mastery Through Daily Coding Commitment
 
 4. [Serialize and deserialize a Binary tree](https://practice.geeksforgeeks.org/problems/serialize-and-deserialize-a-binary-tree/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)  
 ## Day-11
-### Upcoming
+ Learnt about what is MERN Stack development and API
 ## Day-12
 ### Upcoming
 ## Day-13
