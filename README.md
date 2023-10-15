@@ -194,13 +194,11 @@ A Journey to Mastery Through Daily Coding Commitment
 ## Day-11
  Learnt about what is MERN Stack development and API
 ## Day-12
-### Upcoming
+ Started a new programming language ,JavaScript
 ## Day-13
-### Upcoming
-## Day-14
-### Upcoming
+Learning js
 ## Day-15
-### Upcoming
+Js and react.[Good Documentation for React](https://react.dev/learn)
 ## Day-16
 ### Upcoming
 ## Day-17
