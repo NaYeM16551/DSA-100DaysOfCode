@@ -200,15 +200,25 @@ Learning js
 ## Day-15
 Js and react.[Good Documentation for React](https://react.dev/learn)
 ## Day-16
-### Upcoming
+javascript concept learning 
 ## Day-17
-### Upcoming
+Oop and js 
 ## Day-18
-### Upcoming
+Oop and javascript concept learning
 ## Day-19
-### Upcoming
+  Js
 ## Day-20
-### Upcoming
+1. [Search in a Bst ](https://www.geeksforgeeks.org/problems/search-a-node-in-bst/1)
+2. [Delete Node form BST](https://practice.geeksforgeeks.org/problems/delete-a-node-from-bst/1)
+3. [Kth smallest element in a BST](https://www.geeksforgeeks.org/problems/find-k-th-smallest-element-in-bst/1)
+4. [Kth largect element in a BST](https://www.geeksforgeeks.org/problems/kth-largest-element-in-bst/1)
+5. [Inorder and Predecessor in a BST](https://www.codingninjas.com/studio/problems/predecessor-and-successor-in-bst_893049?leftPanelTabValue=PROBLEM)
+6. [LCA in a BST](https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-bst/1)
+7. [Two Sum in BST](https://practice.geeksforgeeks.org/problems/find-a-pair-with-given-target-in-bst/1)
+8. [Flatten BST to sorted List](https://www.codingninjas.com/studio/problems/flatten-bst-to-a-sorted-list_1169459?leftPanelTabValue=PROBLEM)
+9. [Normal BST to balanced BST](https://practice.geeksforgeeks.org/problems/normal-bst-to-balanced-bst/1)
+10. [Construct BST from preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/description/)
+11. [Merged two BST](https://www.codingninjas.com/studio/library/merge-two-balanced-bsts)
 ## Day-21
 ### Upcoming
 ## Day-22

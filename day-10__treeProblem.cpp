@@ -163,12 +163,6 @@ TreeNode*deSerialize(vector<int> &v)
 
 int main()
 {
-    TreeNode *root = nullptr;
-    ifstream fin("input.txt");
-    buildTreeFromLevelOrder(root, fin);
-    auto ans = serialize(root);
-    show(ans);
-    TreeNode *root2=deSerialize(ans);
-    levelOrderTraversal(root2);
+   cout<<value<<endl;
     
 }

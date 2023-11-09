@@ -59,6 +59,8 @@ bool isBstCheck(const TreeNode *root, int minValue, int maxValue)
          isBstCheck(root->right, root->data + 1, maxValue);
 }
 
+ int value=2;
+
 bool isBST(const TreeNode *root)
 {
   return isBstCheck(root, INT_MIN, INT_MAX);
