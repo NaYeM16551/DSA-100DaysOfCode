@@ -220,7 +220,10 @@ Oop and javascript concept learning
 10. [Construct BST from preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/description/)
 11. [Merged two BST](https://www.codingninjas.com/studio/library/merge-two-balanced-bsts)
 ## Day-21
-### Upcoming
+1. [Merge two sorted LinkedList](https://practice.geeksforgeeks.org/problems/merge-two-sorted-linked-lists/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article)
+2. [Largest Bst in a Binary tree](https://practice.geeksforgeeks.org/problems/largest-bst/1)
+3. [Ceil of a BST](https://www.geeksforgeeks.org/problems/implementing-ceil-in-bst/1)
+4. [Binaryb Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/description/?source=submission-ac)
 ## Day-22
 ### Upcoming
 ## Day-23

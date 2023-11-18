@@ -113,19 +113,19 @@ pair<int, int> predecessorSuccessor(TreeNode *root, int key)
     return {pre,succ};
 }
 
-int main()
-{
-    TreeNode *root = nullptr;
-    ifstream fin("input.txt");
-    int data;
-    fin >> data;
-    while (data != -1)
-    {
-        root = insertIntoBst(root, data);
-        fin >> data;
-    }
-    int key;
-    fin>>key;
-    auto ans=predecessorSuccessor(root,key);
-    cout<<ans.first <<" "<< ans.second<<endl;
-}
+// int main()
+// {
+//     TreeNode *root = nullptr;
+//     ifstream fin("input.txt");
+//     int data;
+//     fin >> data;
+//     while (data != -1)
+//     {
+//         root = insertIntoBst(root, data);
+//         fin >> data;
+//     }
+//     int key;
+//     fin>>key;
+//     auto ans=predecessorSuccessor(root,key);
+//     cout<<ans.first <<" "<< ans.second<<endl;
+// }
