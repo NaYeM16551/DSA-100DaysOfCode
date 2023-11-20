@@ -225,7 +225,8 @@ Oop and javascript concept learning
 3. [Ceil of a BST](https://www.geeksforgeeks.org/problems/implementing-ceil-in-bst/1)
 4. [Binaryb Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/description/?source=submission-ac)
 ## Day-22
-### Upcoming
+1. [Next Greater Element](https://www.geeksforgeeks.org/problems/next-larger-element-1587115620/1)
+2. [Partition equal subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)
 ## Day-23
 ### Upcoming
 ## Day-24
