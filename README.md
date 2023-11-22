@@ -227,10 +227,13 @@ Oop and javascript concept learning
 ## Day-22
 1. [Next Greater Element](https://www.geeksforgeeks.org/problems/next-larger-element-1587115620/1)
 2. [Partition equal subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)
+3. [LRU Cache](https://leetcode.com/problems/lru-cache/)
 ## Day-23
-### Upcoming
+1. [LFU cache](https://leetcode.com/problems/lfu-cache/description/)
 ## Day-24
-### Upcoming
+1. [Nearest Smaller to left](https://practice.geeksforgeeks.org/problems/smallest-number-on-left3403/1)
+2. [Stock Span problem](https://practice.geeksforgeeks.org/problems/stock-span-problem-1587115621/1?page=4&difficulty%5B%5D=1&sortBy=submissions)
+3. [Subset Sum Count](https://leetcode.com/problems/target-sum/solutions/1470377/c-dp-similar-to-count-of-subset-with-given-sum-inspired-by-aditya-verma/)
 ## Day-25
 ### Upcoming
 ## Day-26
