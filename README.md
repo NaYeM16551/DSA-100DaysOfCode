@@ -234,7 +234,9 @@ Oop and javascript concept learning
 1. [Nearest Smaller to left](https://practice.geeksforgeeks.org/problems/smallest-number-on-left3403/1)
 2. [Stock Span problem](https://practice.geeksforgeeks.org/problems/stock-span-problem-1587115621/1?page=4&difficulty%5B%5D=1&sortBy=submissions)
 3. [Subset Sum Count](https://leetcode.com/problems/target-sum/solutions/1470377/c-dp-similar-to-count-of-subset-with-given-sum-inspired-by-aditya-verma/)
+4. [Maximum Area of a Histogram](https://www.geeksforgeeks.org/problems/maximum-rectangular-area-in-a-histogram-1587115620/1)
 ## Day-25
+
 ### Upcoming
 ## Day-26
 ### Upcoming

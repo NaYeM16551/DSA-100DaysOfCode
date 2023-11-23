@@ -2,7 +2,7 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
+extern int value;
 struct TreeNode
 {
   int data;
@@ -31,3 +31,7 @@ bool symmetricHelp(const TreeNode *left, const TreeNode *right);
 bool isSymmetric(const TreeNode *root);
 void buildTreeFromLevelOrder(TreeNode *&root, ifstream &fin);
 void levelOrderTraversal(TreeNode* root);
+vector<int> inorder(TreeNode* root);
+vector<int> postorderTraversal(TreeNode *root);
+vector<int> preOrder(TreeNode *root);
+TreeNode *insertIntoBst(TreeNode *root, int data);
