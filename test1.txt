@@ -1,0 +1,3 @@
+hello world from test.cpp
+hello beuddy in funcFoo
+hello world I love you!

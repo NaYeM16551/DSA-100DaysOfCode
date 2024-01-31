@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include "headerFile/test.h"
 
 #define show(v)                  \
     trav(i, v) cout << i << " "; \
@@ -6,6 +7,8 @@
 #define trav(i, v) for (auto &i : v)
 
 #define watch(x) cerr << #x << " = " << x << "\n"
+extern ofstream out11;
+extern string st;
 using namespace std;
 
 class LRU_cache
@@ -187,10 +190,18 @@ public:
         }
     }
 };
-int main()
+
+int dummy(int a,int b)
+{
+    out11<<"hello beuddy in funcFoo"<<endl;
+    st+=" I love you!";
+    out11<<st<<endl;
+    return a+b;
+}
+/* int main()
 {
 
-    LRU_cache LRU(4);
+    /* LRU_cache LRU(2);
 
     while (true)
     {
@@ -210,5 +221,7 @@ int main()
         }
         else
             break;
-    }
-}
+    } 
+  out1<<"hello world from LRU"<<endl;
+
+} */

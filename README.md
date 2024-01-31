@@ -236,10 +236,11 @@ Oop and javascript concept learning
 3. [Subset Sum Count](https://leetcode.com/problems/target-sum/solutions/1470377/c-dp-similar-to-count-of-subset-with-given-sum-inspired-by-aditya-verma/)
 4. [Maximum Area of a Histogram](https://www.geeksforgeeks.org/problems/maximum-rectangular-area-in-a-histogram-1587115620/1)
 ## Day-25
-
-### Upcoming
+1. [Maximum  Area of Rectangle in a Binary Matrix](https://practice.geeksforgeeks.org/problems/max-rectangle/1?utm_source=youtube&utm_medium=collab_fraz_websitelink&utm_campaign=Max+rectangle)
+2. [Subsets](https://leetcode.com/problems/subsets/description/)
 ## Day-26
-### Upcoming
+1. [Rain water Trapping](https://practice.geeksforgeeks.org/problems/trapping-rain-water-1587115621/1)
+2. [Minimum element in o(1) space](https://www.geeksforgeeks.org/problems/get-minimum-element-from-stack/1)
 ## Day-27
 ### Upcoming
 ## Day-28
