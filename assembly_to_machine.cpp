@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #include <bitset>
 
 // t0 5 t1 1 t2 2 t3 3 t4 4 zero 0
@@ -8,449 +8,196 @@
 #define T3 "0100"
 #define T4 "0101"
 #define ZERO "0000"
-#define INSTRUCTION_SIZE 1
-
-// #define SUB  "0000"
-// #define ORI  "0001"
-// #define BNEQ  "0010"
-// #define ADDI  "0011"
-// #define BEQ  "0100"
-// #define OR  "0101"
-// #define SW  "0110"
-// #define SRL  "0111"
-// #define AND  "1000"
-// #define ANDI  "1001"
-// #define LW  "1010"
-// #define ADD  "1011"
-// #define SLL  "1100"
-// #define SUBI  "1101"
-// #define J  "1110"
-// #define NOR  "1111"
 
 
-// Assembler: AHLOGBFNMJDPECKI
-#define ADD "1110" // A
-#define ORI "0110"  // H
-#define SW "0000"// L
+// Assembler: LNKIFHPBECOGJMAD 
+#define ADD "1110"  // A
+#define ORI "0101"  // H
+#define SW "0000"   // L
 #define BNEQ "1010" // O
-#define OR "1011" // G
+#define OR "1011"   // G
 #define ADDI "0111" // B
 #define ANDI "0100" // F
-#define BEQ  "0001"
-#define LW  "1101"
+#define BEQ "0001"
+#define LW "1101"
 #define SRL "1100"
-#define SUBI  "1111"
-#define J  "0110"
-#define AND  "1000"
-#define SUB  "1001"
-#define NOR  "0010"
-#define SLL  "0011"
+#define SUBI "1111"
+#define J "0110"
+#define AND "1000"
+#define SUB "1001"
+#define NOR "0010"
+#define SLL "0011"
 
 using namespace std;
 
-int lineCount= 0;
-vector<pair<string,int> > labelAddress;
-
-vector<string> split(const string &s)
+std::string bin_to_hex(std::string binary)
 {
-    vector<string> elements;
-    string item = "";
-    for (int i = 0; i < s.length(); i++) {
-        if (s[i] == ' ' || s[i] == ',' || s[i] == '\t') {
-            if (item != "") {
-                elements.push_back(item);
-                item = "";
-            }
-        }
-        else {
-            item += s[i];
-        }
+    binary = std::string(binary.length() % 4 ? 4 - binary.length() % 4 : 0, '0') + binary;
+    std::unordered_map<std::string, char> hex_dict = {
+        {"0000", '0'}, {"0001", '1'}, {"0010", '2'}, {"0011", '3'}, {"0100", '4'}, {"0101", '5'}, {"0110", '6'}, {"0111", '7'}, {"1000", '8'}, {"1001", '9'}, {"1010", 'A'}, {"1011", 'B'}, {"1100", 'C'}, {"1101", 'D'}, {"1110", 'E'}, {"1111", 'F'}};
+    std::string hexadecimal;
+    for (size_t i = 0; i < binary.length(); i += 4)
+    {
+        std::string group = binary.substr(i, 4);
+        hexadecimal += hex_dict[group];
     }
-
-    if (item != "") {
-        elements.push_back(item);
-    }
-
-    return elements;
+    return hexadecimal;
 }
 
-string toHex(string str) {
-    string hex = "";
-    for (int i = 0; i < str.size(); i += 4) {
-        string temp = str.substr(i, 4);
-        if (temp == "0000") {
-            hex += "0";
-        } else if (temp == "0001") {
-            hex += "1";
-        } else if (temp == "0010") {
-            hex += "2";
-        } else if (temp == "0011") {
-            hex += "3";
-        } else if (temp == "0100") {
-            hex += "4";
-        } else if (temp == "0101") {
-            hex += "5";
-        } else if (temp == "0110") {
-            hex += "6";
-        } else if (temp == "0111") {
-            hex += "7";
-        } else if (temp == "1000") {
-            hex += "8";
-        } else if (temp == "1001") {
-            hex += "9";
-        } else if (temp == "1010") {
-            hex += "a";
-        } else if (temp == "1011") {
-            hex += "b";
-        } else if (temp == "1100") {
-            hex += "c";
-        } else if (temp == "1101") {
-            hex += "d";
-        } else if (temp == "1110") {
-            hex += "e";
-        } else if (temp == "1111") {
-            hex += "f";
+std::vector<std::string> tokenize(const std::string &str, const char delim)
+{
+    // Construct a stream from the string
+    std::stringstream ss(str);
+    std::vector<std::string> out;
+
+    std::string s;
+    while (std::getline(ss, s, delim))
+    {
+        if (!s.empty())
+        {
+            while (s[s.size() - 1] == ' ' || s[s.size() - 1] == '$')
+                s.pop_back();
+            while (s[0] == ' ' || s[0] == '$')
+                s.erase(0, 1);
+            out.push_back(s);
         }
     }
-    return hex;
+    return out;
+}
+string decimal_to_binary(int number,bool jump)
+{
+    if(number==0)
+      return "0000";
+    int n = (int)(log2(number));
+
+    auto ans = bitset<64>(number).to_string().substr(64 - n - 1);
+    if(jump and number!=0)
+    {
+        while (ans.size() < 8)
+    {
+        ans.insert(ans.begin(), '0'); 
+    }
+    }
+    while (ans.size() < 4)
+    {
+        ans.insert(ans.begin(), '0');
+    }
+
+   
+    return ans;
 }
 
-void pushbackLabels(string line){
-
-    vector<string> v= split(line);
-    // cout<<v[0];
-    if(v[0]=="sub"||v[0]=="ori"||v[0]=="bneq"||v[0]=="addi"||
-        v[0]=="beq"||v[0]=="or"||v[0]=="sw"||v[0]=="srl"||
-        v[0]=="and"||v[0]=="andi"||v[0]=="lw"||v[0]=="add"||
-        v[0]=="sll"||v[0]=="subi"||v[0]=="j"||v[0]=="nor");
-    else {
-        // cout << "line count: " << lineCount << endl;
-        labelAddress.push_back(make_pair(v[0], lineCount));
+void process_token(std::vector<std::string> &ans, bool &jump,bool& load) {
+    //for lw,sw and j statemnet handling
+    if (ans.size() == 2) {
+        auto temp = tokenize(ans[1], '(');
+        temp[1].pop_back();
+        ans.pop_back();
+        for (auto &t : temp)
+            ans.push_back(t);
+            load=true;
+    } else if (ans.size() == 1) {
+        ans.push_back("0");
+        jump = true;
     }
 }
 
-string convert(string line) {
-    string instruction="";
-    vector<string> v= split(line);
-    // cout<<"# "<<lineCount<<endl;
-    // for(int i=0; i<v.size(); i++)
-    //     cout<<v[i]<<endl;
-
-
-
-    string item = v[0];
-
-    // instruction
-    if (item == "sub")
-        instruction += SUB;
-    else if (item == "ori")
-        instruction += ORI;
-    else if (item == "bneq")
-        instruction += BNEQ;
-    else if (item == "addi")
-        instruction += ADDI;
-    else if (item == "beq")
-        instruction += BEQ;
-    else if (item == "or")
-        instruction += OR;
-    else if (item == "sw")
-        instruction += SW;
-    else if (item == "srl")
-        instruction += SRL;
-    else if (item == "and")
-        instruction += AND;
-    else if (item == "andi")
-        instruction += ANDI;
-    else if (item == "lw")
-        instruction += LW;
-    else if (item == "add")
-        instruction += ADD;
-    else if (item == "sll")
-        instruction += SLL;
-    else if (item == "subi")
-        instruction += SUBI;
-    else if (item == "j")
-        instruction += J;
-    else if (item == "nor")
-        instruction += NOR;
-
-    else {
-        // cout << "line count: " << lineCount << endl;
-        labelAddress.push_back(make_pair(item, lineCount));
-        vector<string> temp;
-        for (int j=1; j<v.size(); j++){
-            temp.push_back(v[j]);
-        }
-        v=temp;
-        item = v[0];
-        // instruction
-        if (item == "sub")
-            instruction += SUB; // No change here
-        else if (item == "ori")
-            instruction += ORI;
-        else if (item == "bneq")
-            instruction += BNEQ;
-        else if (item == "addi")
-            instruction += ADDI;
-        else if (item == "beq")
-            instruction += BEQ;
-        else if (item == "or")
-            instruction += OR;
-        else if (item == "sw")
-            instruction += SW;
-        else if (item == "srl")
-            instruction += SRL;
-        else if (item == "and")
-            instruction += AND;
-        else if (item == "andi")
-            instruction += ANDI;
-        else if (item == "lw")
-            instruction += LW;
-        else if (item == "add")
-            instruction += ADD;
-        else if (item == "sll")
-            instruction += SLL;
-        else if (item == "subi")
-            instruction += SUBI;
-        else if (item == "j")
-            instruction += J;
-        else if (item == "nor")
-            instruction += NOR;
+void reorder_tokens(std::vector<std::string> &ans,bool load) {
+    //to fit in mips instruction,desination should be at last position
+    if (!ans.empty() && !load) {
+        auto dest = ans[0];
+        ans.erase(ans.begin());
+        ans.push_back(dest);
+        
     }
-
-
-    // R format : sub, or, and, add, nor
-    if((instruction==SUB)||(instruction==OR)||(instruction==AND)||(instruction==ADD)||(instruction==NOR)) {
-
-        if (v[2]=="$t0") instruction+=T0;
-        else if (v[2]=="$t1") instruction+=T1;
-        else if (v[2]=="$t2") instruction+=T2;
-        else if (v[2]=="$t3") instruction+=T3;
-        else if (v[2]=="$t4") instruction+=T4;
-        else if (v[2]=="$zero") instruction+=ZERO;
-        // instruction+=" "; //for debugging
-
-        if (v[3]=="$t0") instruction+=T0;
-        else if (v[3]=="$t1") instruction+=T1;
-        else if (v[3]=="$t2") instruction+=T2;
-        else if (v[3]=="$t3") instruction+=T3;
-        else if (v[3]=="$t4") instruction+=T4;
-        else if (v[3]=="$zero") instruction+=ZERO;
-        // instruction+=" "; //for debugging
-
-        if (v[1]=="$t0") instruction+=T0;
-        else if (v[1]=="$t1") instruction+=T1;
-        else if (v[1]=="$t2") instruction+=T2;
-        else if (v[1]=="$t3") instruction+=T3;
-        else if (v[1]=="$t4") instruction+=T4;
-        else if (v[1]=="$zero") instruction+=ZERO;
-
-        return instruction;
+    else if(!ans.empty() && load)
+    {
+       auto dest=ans[2];
+       ans.pop_back();
+       ans.insert(ans.begin(),dest);
     }
-
-    // S format : srl, sll
-    else if((instruction==SRL)||(instruction==SLL)){
-
-        if (v[2]=="$t0") instruction+=T0;
-        else if (v[2]=="$t1") instruction+=T1;
-        else if (v[2]=="$t2") instruction+=T2;
-        else if (v[2]=="$t3") instruction+=T3;
-        else if (v[2]=="$t4") instruction+=T4;
-        else if (v[2]=="$zero") instruction+=ZERO;
-        // instruction+=" "; //for debugging
-
-        if (v[1]=="$t0") instruction+=T0;
-        else if (v[1]=="$t1") instruction+=T1;
-        else if (v[1]=="$t2") instruction+=T2;
-        else if (v[1]=="$t3") instruction+=T3;
-        else if (v[1]=="$t4") instruction+=T4;
-        else if (v[1]=="$zero") instruction+=ZERO;
-        // instruction+=" "; //for debugging
-
-        int const_int=stoi(v[3]);
-        string const_str="0000";
-
-        for(int j=0; const_int>0; j++) {
-            const_str[const_str.size()-j-1]=(const_int%2)?'1':'0';
-            const_int= const_int/2;
-        }
-
-        instruction+=const_str;
-
-        return instruction;
-    }
-
-    // I format constant : ori, addi, andi, subi
-    else if((instruction==ORI)||(instruction==ADDI)||(instruction==ANDI)||(instruction==SUBI)){
-
-        if (v[2]=="$t0") instruction+=T0;
-        else if (v[2]=="$t1") instruction+=T1;
-        else if (v[2]=="$t2") instruction+=T2;
-        else if (v[2]=="$t3") instruction+=T3;
-        else if (v[2]=="$t4") instruction+=T4;
-        else if (v[2]=="$zero") instruction+=ZERO;
-        // instruction+=" "; //for debugging
-
-        if (v[1]=="$t0") instruction+=T0;
-        else if (v[1]=="$t1") instruction+=T1;
-        else if (v[1]=="$t2") instruction+=T2;
-        else if (v[1]=="$t3") instruction+=T3;
-        else if (v[1]=="$t4") instruction+=T4;
-        else if (v[1]=="$zero") instruction+=ZERO;
-        // instruction+=" "; //for debugging
-
-        int const_int=stoi(v[3]);
-        cout<<const_int<<endl;
-//        string const_str="";
-
-        string const_str = bitset<4>(const_int).to_string();
-
-
-//        char str_32[32];
-//        sprintf(str_32, "%032b", const_int);
-//        for(int i = 28; i < 32; i++)
-//        {
-//            cout<<str_32[i];
-//            const_str += str_32[i];
-//        }
-//        cout<<endl;
-
-
-        instruction+=const_str;
-
-        return instruction;
-    }
-
-    // I format control : beq, bneq
-    else if((instruction==BEQ)||(instruction==BNEQ)){
-
-        if (v[2]=="$t0") instruction+=T0;
-        else if (v[2]=="$t1") instruction+=T1;
-        else if (v[2]=="$t2") instruction+=T2;
-        else if (v[2]=="$t3") instruction+=T3;
-        else if (v[2]=="$t4") instruction+=T4;
-        else if (v[2]=="$zero") instruction+=ZERO;
-        // instruction+=" "; //for debugging
-
-        if (v[1]=="$t0") instruction+=T0;
-        else if (v[1]=="$t1") instruction+=T1;
-        else if (v[1]=="$t2") instruction+=T2;
-        else if (v[1]=="$t3") instruction+=T3;
-        else if (v[1]=="$t4") instruction+=T4;
-        else if (v[1]=="$zero") instruction+=ZERO;
-        // instruction+=" "; //for debugging
-
-        // v3 is label, fetch the line number
-
-        int bAddress;
-        for(int j=0; j<labelAddress.size(); j++){
-                // cout << "j " << j << endl;
-        // cout << labelAddress[j].first << endl;
-            if(labelAddress[j].first == v[3] + ":") {
-                bAddress=labelAddress[j].second;
-            }
-        }
-
-
-        int const_int=(bAddress-lineCount-1)*INSTRUCTION_SIZE; //+1?
-        string const_str = bitset<4>(const_int).to_string();
-
-        instruction+=const_str;
-
-        return instruction;
-    }
-
-    // I format memory : sw, lw
-    else if((instruction==SW)||(instruction==LW)){
-
-        string constant;
-        stringstream ss2(v[2]);
-        if (getline(ss2,item,'(')) {
-            constant=item;
-        }
-        if (getline(ss2,item,')')) {
-            if (item=="$t0") instruction+=T0;
-            else if (item=="$t1") instruction+=T1;
-            else if (item=="$t2") instruction+=T2;
-            else if (item=="$t3") instruction+=T3;
-            else if (item=="$t4") instruction+=T4;
-            else if (item=="$zero") instruction+=ZERO;
-        }
-
-        if (v[1]=="$t0") instruction+=T0;
-        else if (v[1]=="$t1") instruction+=T1;
-        else if (v[1]=="$t2") instruction+=T2;
-        else if (v[1]=="$t3") instruction+=T3;
-        else if (v[1]=="$t4") instruction+=T4;
-        else if (v[1]=="$zero") instruction+=ZERO;
-        // instruction+=" "; //for debugging
-
-        int const_int=stoi(constant)*INSTRUCTION_SIZE;
-        string const_str = bitset<4>(const_int).to_string();
-
-        instruction+=const_str;
-
-        return instruction;
-    }
-
-    // J format : j
-    else if((instruction=="1110")){
-
-        int jAddress;
-        for(int j=0; j<labelAddress.size(); j++){
-            // cout << "j " << j << endl;
-            // cout << labelAddress[j].first << endl;
-            if(labelAddress[j].first == v[1] + ":") {
-                jAddress=labelAddress[j].second;
-            }
-        }
-
-
-        // cout << jAddress;
-        int const_int=jAddress*INSTRUCTION_SIZE;
-        string const_str = bitset<8>(const_int).to_string();
-
-        instruction+=const_str;
-
-        instruction+="0000";
-
-        return instruction;
-    }
-
-    else return instruction;
 }
 
-int main ()
+std::pair<std::string, std::string> convert_to_binary_and_hex(const std::string &s, std::map<std::string, std::string> &mp) {
+    std::string binary, hex;
+
+    auto ans = tokenize(s, ' ');
+    binary += mp[ans[0]] + " ";
+    hex += bin_to_hex(mp[ans[0]]);
+    ans = tokenize(ans[1], ',');
+    bool jump=false,load=false;
+
+    process_token(ans, jump,load);
+    if(!jump)
+     reorder_tokens(ans,load);
+
+
+   for (auto &a : ans)
+    {
+
+        if (mp.find(a) == mp.end())
+        {
+            cout << a << endl;
+            binary += decimal_to_binary(stoi(a),jump) + " ";
+            hex += bin_to_hex(decimal_to_binary(stoi(a),jump));
+        }
+        else
+        {
+            binary += mp[a] + " ";
+            hex += bin_to_hex(mp[a]);
+        }
+    }
+
+    return {binary, hex};
+}
+
+void map_initialization(map<string, string> &mp)
+{
+
+    mp["add"] = ADD;
+    mp["ori"] = ORI;
+    mp["sw"] = SW;
+    mp["bneq"] = BNEQ;
+    mp["or"] = OR;
+    mp["addi"] = ADDI;
+    mp["andi"] = ANDI;
+    mp["beq"] = BEQ;
+    mp["lw"] = LW;
+    mp["srl"] = SRL;
+    mp["subi"] = SUBI;
+    mp["j"] = J;
+    mp["and"] = AND;
+    mp["sub"] = SUB;
+    mp["nor"] = NOR;
+    mp["sll"] = SLL;
+    mp["t0"] = T0;
+    mp["t1"] = T1;
+    mp["t2"] = T2;
+    mp["t3"] = T3;
+    mp["t4"] = T4;
+    mp["zero"] = ZERO;
+}
+
+int main()
 {
     string line;
-    ifstream fin ("assembly.txt");
-    ofstream fout ("machine.txt");
-    fout << "v2.0 raw" << endl;
-    if (fin.is_open()) {
-        while (getline (fin,line)) {
-            // lineCount++;
-            // cout<<"AAAA";
-            pushbackLabels(line);
-            lineCount++;
-        }
-        fin.close();
+    ifstream fin("assembly.txt");
+    ofstream fbinary("machine.txt");
+    ofstream fhex("hex_file.txt");
 
-        for(int i = 0; i < labelAddress.size(); i++){
-            cout << labelAddress[i].first << ", " << labelAddress[i].second << endl;
-        }
+    map<string, string> mp;
+    map_initialization(mp);
 
-        fin.open("assembly.txt");
-        lineCount=0;
-        while (getline (fin,line)) {
-            // lineCount++;
-            string str_bin=convert(line);
-//            string str_hex=toHex(str_bin);
-            fout<<str_bin<<endl;
-            lineCount++;
-        }
-        fin.close();
+    while (getline(fin, line))
+    {
+        // lineCount++;
+        auto binary_and_hex = convert_to_binary_and_hex(line, mp);
+        fbinary << binary_and_hex.first << endl;
+        fhex << binary_and_hex.second << endl;
     }
-    else cout<<"Unable to open file"<<endl;
-    fout.close();
+    fin.close();
+    fbinary.close();
+    fhex.close();
+
     return 0;
 }
