@@ -12,6 +12,7 @@ using namespace std;
  bool is_subset_sum(const vector<int>&v,int n,vector<vector<bool>>&dp,int k)
 {
   
+    
     for(int i=1;i<=n;++i)
     {
         for(int j=1;j<=k;++j)
@@ -37,7 +38,7 @@ int main()
      fin>>v[i];
     int k;
     fin>>k; 
-     vector<vector<bool>> dp(n+1,vector<bool>(k+1));
+    vector<vector<bool>> dp(n+1,vector<bool>(k+1));
     for(int i=0;i<=n;i++)
     {
         for(int j=0;j<=k;++j)

@@ -242,9 +242,9 @@ Oop and javascript concept learning
 1. [Rain water Trapping](https://practice.geeksforgeeks.org/problems/trapping-rain-water-1587115621/1)
 2. [Minimum element in o(1) space](https://www.geeksforgeeks.org/problems/get-minimum-element-from-stack/1)
 ## Day-27
-### Upcoming
+1. [Count subset sum](https://leetcode.com/problems/target-sum/solutions/1470377/c-4ms-beats-98-similar-to-count-of-subset-with-given-sum-dp-explanation/)
 ## Day-28
-### Upcoming
+1. [Rod cutting problem](https://www.geeksforgeeks.org/problems/rod-cutting0840/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=bottom_sticky_on_article)
 ## Day-29
 ### Upcoming
 ## Day-30

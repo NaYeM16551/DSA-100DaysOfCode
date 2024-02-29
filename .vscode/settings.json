@@ -4,5 +4,6 @@
     "files.associations": {
         "ostream": "cpp",
         "iosfwd": "cpp"
-    }
+    },
+    "liveServer.settings.port": 5501
 }
